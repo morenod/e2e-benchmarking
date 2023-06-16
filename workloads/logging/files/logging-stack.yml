@@ -97,14 +97,8 @@ spec:
       replicas: 1
   collection:
     logs:
-      type: "fluentd"
-      fluentd:
-        resources:
-          limits:
-            memory: 1Gi
-          requests:
-            cpu: 500m
-            memory: 1Gi
+      type: "vector"
+      vector: {}
 ---
 apiVersion: logging.openshift.io/v1
 kind: ClusterLogForwarder
